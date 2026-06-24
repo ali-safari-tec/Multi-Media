@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:color="using:Windows.UI"
+    xmlns:local="using:PersonalWinUIApp">
+
+    <color:Color x:Key="SystemAccentColor">#FF0078D7</color:Color>
+    <color:Color x:Key="SystemAccentColorLight1">#FF0078D7</color:Color>
+    <color:Color x:Key="SystemAccentColorLight2">#FF0078D7</color:Color>
+    <color:Color x:Key="SystemAccentColorLight3">#FF0078D7</color:Color>
+    <color:Color x:Key="SystemAccentColorDark1">#FF0078D7</color:Color>
+    <color:Color x:Key="SystemAccentColorDark2">#FF0078D7</color:Color>
+    <color:Color x:Key="SystemAccentColorDark3">#FF0078D7</color:Color>
+
+
+    <SolidColorBrush x:Key="AppAccent" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="AppAccentLight1" Color="#FF2B88D8"/>
+    <SolidColorBrush x:Key="AppAccentLight2" Color="#FF4CA0E0"/>
+    <SolidColorBrush x:Key="AppAccentLight3" Color="#FF7FBFEA"/>
+    <SolidColorBrush x:Key="AppAccentDark1" Color="#FF006CBE"/>
+    <SolidColorBrush x:Key="AppAccentDark2" Color="#FF005A9E"/>
+    <SolidColorBrush x:Key="AppAccentDark3" Color="#FF004578"/>
+    <SolidColorBrush x:Key="AppPrimaryText" Color="White"/>
+    <SolidColorBrush x:Key="AppSecondaryText" Color="#B3FFFFFF"/>
+    <SolidColorBrush x:Key="SystemAccentColorBrush" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="SystemAccentColorLight1Brush" Color="#FF2B88D8"/>
+    <SolidColorBrush x:Key="SystemAccentColorLight2Brush" Color="#FF4CA0E0"/>
+    <SolidColorBrush x:Key="SystemAccentColorLight3Brush" Color="#FF7FBFEA"/>
+    <SolidColorBrush x:Key="SystemAccentColorDark1Brush" Color="#FF006CBE"/>
+    <SolidColorBrush x:Key="SystemAccentColorDark2Brush" Color="#FF005A9E"/>
+    <SolidColorBrush x:Key="SystemAccentColorDark3Brush" Color="#FF004578"/>
+    <SolidColorBrush x:Key="AccentFillColorDefaultBrush" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="AccentFillColorSecondaryBrush" Color="#FF2B88D8"/>
+    <SolidColorBrush x:Key="AccentFillColorTertiaryBrush" Color="#FF4CA0E0"/>
+    <SolidColorBrush x:Key="AccentFillColorDisabledBrush" Color="#FF7FBFEA"/>
+    <SolidColorBrush x:Key="AccentTextFillColorPrimaryBrush" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="AccentTextFillColorSecondaryBrush" Color="#FF006CBE"/>
+    <SolidColorBrush x:Key="AccentTextFillColorTertiaryBrush" Color="#FF005A9E"/>
+    <SolidColorBrush x:Key="AccentTextFillColorDisabledBrush" Color="#FF004578"/>
+    <SolidColorBrush x:Key="TextOnAccentFillColorPrimaryBrush" Color="White"/>
+    <SolidColorBrush x:Key="TextOnAccentFillColorSecondaryBrush" Color="#CCFFFFFF"/>
+    <SolidColorBrush x:Key="TextOnAccentFillColorDisabledBrush" Color="#88FFFFFF"/>
+    <SolidColorBrush x:Key="ControlFillColorOnAccentDefaultBrush" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="ControlFillColorOnAccentSecondaryBrush" Color="#FF2B88D8"/>
+    <SolidColorBrush x:Key="ControlFillColorOnAccentTertiaryBrush" Color="#FF4CA0E0"/>
+    <SolidColorBrush x:Key="ControlFillColorOnAccentDisabledBrush" Color="#FF7FBFEA"/>
+    <SolidColorBrush x:Key="ControlStrokeColorOnAccentDefaultBrush" Color="#FF006CBE"/>
+    <SolidColorBrush x:Key="ControlStrokeColorOnAccentSecondaryBrush" Color="#FF005A9E"/>
+    <SolidColorBrush x:Key="ControlStrokeColorOnAccentTertiaryBrush" Color="#FF004578"/>
+    <SolidColorBrush x:Key="ControlStrokeColorOnAccentDisabledBrush" Color="#FF7FBFEA"/>
+    <SolidColorBrush x:Key="FocusStrokeColorOuterBrush" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="FocusStrokeColorInnerBrush" Color="#FF2B88D8"/>
+    <SolidColorBrush x:Key="AccentHyperlinkForeground" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="AccentHyperlinkForegroundPointerOver" Color="#FF2B88D8"/>
+    <SolidColorBrush x:Key="AccentHyperlinkForegroundPressed" Color="#FF006CBE"/>
+    <SolidColorBrush x:Key="AccentHyperlinkForegroundDisabled" Color="#FF7FBFEA"/>
+    <SolidColorBrush x:Key="ProgressBarForeground" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="ProgressRingForeground" Color="#FF0078D7"/>
+    <SolidColorBrush x:Key="SliderTrackFill" Color="#FF4CA0E0"/>
+    <SolidColorBrush x:Key="SliderTrackValueFill" Color="#FF0078D7"/>
+
+</ResourceDictionary>

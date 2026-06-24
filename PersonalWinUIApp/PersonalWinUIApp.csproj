@@ -1,0 +1,442 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.22621.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.22000.0</TargetPlatformMinVersion>
+    <RootNamespace>PersonalWinUIApp</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <PublishProfile>win-$(Platform).pubxml</PublishProfile>
+    <UseWinUI>true</UseWinUI>
+    <WinUISDKReferences>false</WinUISDKReferences>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\avc.png" />
+    <None Remove="Assets\avi.png" />
+    <None Remove="Assets\Fonts\Estedad-FD-Black.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-Bold.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-ExtraBold.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-ExtraLight.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-Light.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-Medium.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-Regular.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-SemiBold.ttf" />
+    <None Remove="Assets\Fonts\Estedad-FD-Thin.ttf" />
+    <None Remove="Assets\Fonts\IBMPLEXSANS-BOLD.TTF" />
+    <None Remove="Assets\Fonts\IBMPLEXSANS-LIGHT.TTF" />
+    <None Remove="Assets\Fonts\IBMPLEXSANS-MEDIUM.TTF" />
+    <None Remove="Assets\Fonts\IBMPLEXSANS-REGULAR.TTF" />
+    <None Remove="Assets\Fonts\IBMPLEXSANS-SEMIBOLD.TTF" />
+    <None Remove="Assets\Fonts\IBMPLEXSANS-THIN.TTF" />
+    <None Remove="Assets\Fonts\MANROPE-BOLD.TTF" />
+    <None Remove="Assets\Fonts\MANROPE-LIGHT.TTF" />
+    <None Remove="Assets\Fonts\MANROPE-MEDIUM.TTF" />
+    <None Remove="Assets\Fonts\MANROPE-REGULAR.TTF" />
+    <None Remove="Assets\Fonts\MANROPE-SEMIBOLD.TTF" />
+    <None Remove="Assets\Fonts\NOTOSANS-BOLD.TTF" />
+    <None Remove="Assets\Fonts\NOTOSANS-REGULAR.TTF" />
+    <None Remove="Assets\Fonts\Sahel-Bold-FD.ttf" />
+    <None Remove="Assets\Fonts\Sahel-FD.ttf" />
+    <None Remove="Assets\Fonts\Samim-Bold-FD.ttf" />
+    <None Remove="Assets\Fonts\Samim-FD.ttf" />
+    <None Remove="Assets\Fonts\Samim-Medium-FD.ttf" />
+    <None Remove="Assets\Fonts\Shabnam-Bold-FD.ttf" />
+    <None Remove="Assets\Fonts\Shabnam-FD.ttf" />
+    <None Remove="Assets\Fonts\Shabnam-Light-FD.ttf" />
+    <None Remove="Assets\Fonts\Shabnam-Medium-FD.ttf" />
+    <None Remove="Assets\Fonts\Shabnam-Thin-FD.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-Black.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-Bold.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-ExtraBold.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-ExtraLight.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-Light.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-Medium.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-Regular.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-SemiBold.ttf" />
+    <None Remove="Assets\Fonts\Vazirmatn-FD-Thin.ttf" />
+    <None Remove="Assets\MIB.ico" />
+    <None Remove="Assets\mkv.png" />
+    <None Remove="Assets\mov.png" />
+    <None Remove="Assets\mp4.png" />
+    <None Remove="Assets\webm.png" />
+    <None Remove="Assets\wmv.png" />
+    <None Remove="Resources\Styles\SettingButtonsStyle.xaml" />
+    <None Remove="Resources\Styles\SystemAccentManager.xaml" />
+    <None Remove="Views\Account\AccountPage.xaml" />
+    <None Remove="Views\Files\FilesPage.xaml" />
+    <None Remove="Views\Home\HomePage.xaml" />
+    <None Remove="Views\Musics\MusicsPage.xaml" />
+    <None Remove="Views\Pictures\PicturesPage.xaml" />
+    <None Remove="Views\Settings\Pages\AboutPage.xaml" />
+    <None Remove="Views\Settings\Pages\AppearancePage.xaml" />
+    <None Remove="Views\Settings\Pages\LanguagePage.xaml" />
+    <None Remove="Views\Settings\Pages\NetworkPage.xaml" />
+    <None Remove="Views\Settings\Pages\NotificationsPage.xaml" />
+    <None Remove="Views\Settings\Pages\PerformancePage.xaml" />
+    <None Remove="Views\Settings\Pages\PrivacyPage.xaml" />
+    <None Remove="Views\Settings\Pages\StartupPage.xaml" />
+    <None Remove="Views\Settings\SettingsPage.xaml" />
+    <None Remove="Views\Settings\UserControls\AboutUserControl.xaml" />
+    <None Remove="Views\Settings\UserControls\AppearanceUserControl.xaml" />
+    <None Remove="Views\Settings\UserControls\LanguageUserControl.xaml" />
+    <None Remove="Views\Settings\UserControls\NetworkUserControl.xaml" />
+    <None Remove="Views\Settings\UserControls\NotificationUserControl.xaml" />
+    <None Remove="Views\Settings\UserControls\PerformanceUserControl.xaml" />
+    <None Remove="Views\Settings\UserControls\PrivacyUserControl.xaml" />
+    <None Remove="Views\Settings\UserControls\StartupUserControl.xaml" />
+    <None Remove="Views\Shell\ShellPage.xaml" />
+    <None Remove="Views\Videos\Pages\AnimationPage.xaml" />
+    <None Remove="Views\Videos\Pages\MoviesPage.xaml" />
+    <None Remove="Views\Videos\Pages\SeriesPage.xaml" />
+    <None Remove="Views\Videos\VideosPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <!--
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="CommunityToolkit.WinUI.Controls.Primitives" Version="8.2.251219" />
+    <PackageReference Include="H.NotifyIcon.WinUI" Version="2.3.2" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.1839" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.0.1" />
+  </ItemGroup>
+
+  <!--
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+  </PropertyGroup>
+
+  <!-- Publish Properties -->
+  <PropertyGroup>
+    <PublishReadyToRun Condition="'$(Configuration)' == 'Debug'">False</PublishReadyToRun>
+    <PublishReadyToRun Condition="'$(Configuration)' != 'Debug'">True</PublishReadyToRun>
+    <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
+    <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">True</PublishTrimmed>
+    <DefaultLanguage>en</DefaultLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Update="Assets\Fonts\Estedad-FD-Black.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-ExtraBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-ExtraLight.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-SemiBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Estedad-FD-Thin.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\IBMPLEXSANS-BOLD.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\IBMPLEXSANS-LIGHT.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\IBMPLEXSANS-MEDIUM.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\IBMPLEXSANS-REGULAR.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\IBMPLEXSANS-SEMIBOLD.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\IBMPLEXSANS-THIN.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\INTER-BOLD-SLNT=0.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\INTER-REGULAR-SLNT=0.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\MANROPE-BOLD.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\MANROPE-LIGHT.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\MANROPE-MEDIUM.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\MANROPE-REGULAR.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\MANROPE-SEMIBOLD.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Samim-Bold-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Samim-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Samim-Medium-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Shabnam-Bold-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Shabnam-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Shabnam-Light-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Shabnam-Medium-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Shabnam-Thin-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-Black.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-ExtraBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-ExtraLight.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-SemiBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\Fonts\Vazirmatn-FD-Thin.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\Fonts\Sahel-Bold-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\Sahel-FD.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="Assets\Fonts\NOTOSANS-BOLD.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Assets\Fonts\NOTOSANS-REGULAR.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\AboutUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\PrivacyUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\PerformanceUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\NetworkUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\NotificationUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\StartupUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\LanguageUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\UserControls\AppearanceUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Videos\VideosPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Videos\Pages\SeriesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Pictures\PicturesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Musics\MusicsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Videos\Pages\MoviesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Files\FilesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Videos\Pages\AnimationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Account\AccountPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\AboutPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\PrivacyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\PerformancePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\NetworkPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\NotificationsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\StartupPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\LanguagePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\Pages\AppearancePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Settings\SettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Home\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Shell\ShellPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Update="Resources\Languages\faa.resw">
+      <CustomToolNamespace>PersonalWinUIApp</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>fa.Designer.cs</LastGenOutput>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Update="Resources\Languages\enn.resw">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>PersonalWinUIApp</CustomToolNamespace>
+    </PRIResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\TrayIcon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MyWinUIUtilities">
+      <HintPath>..\..\MyWinUIUtilities\MyWinUIUtilities\bin\Debug\net9.0-windows10.0.22621.0\MyWinUIUtilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

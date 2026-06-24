@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="PersonalWinUIApp.Views.Settings.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersonalWinUIApp.Views.Settings"
+    xmlns:helper="using:MyWinUIUtilities.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Spacing="6">
+        <helper:CustomCardButton x:Name="Appearance" Title="{Binding [AppearancePage], Source={StaticResource Loc}}" Text="{Binding [AppearanceText], Source={StaticResource Loc}}" StartGlyph="&#xE771;" EndGlyph="&#xE76C;" Click="Appearance_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+        
+        <helper:CustomCardButton x:Name="AppLanguage" Title="{Binding [LanguagePage], Source={StaticResource Loc}}" Text="{Binding [LanguageText], Source={StaticResource Loc}}" StartGlyph="&#xE8D2;" EndGlyph="&#xE76C;" Click="AppLanguage_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+        
+        <helper:CustomCardButton x:Name="Startup" Title="{Binding [StartupPage], Source={StaticResource Loc}}" Text="{Binding [StartupText], Source={StaticResource Loc}}" StartGlyph="&#xE770;" EndGlyph="&#xE76C;" Click="Startup_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+        
+        <helper:CustomCardButton x:Name="Notifications" Title="{Binding [NotificationsPage], Source={StaticResource Loc}}" Text="{Binding [NotificationsText], Source={StaticResource Loc}}" StartGlyph="&#xE91C;" EndGlyph="&#xE76C;" Click="Notifications_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+        
+        <helper:CustomCardButton x:Name="Network" Title="{Binding [NetworkPage], Source={StaticResource Loc}}" Text="{Binding [NetworkText], Source={StaticResource Loc}}" StartGlyph="&#xE701;" EndGlyph="&#xE76C;" Click="Network_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+        
+        <helper:CustomCardButton x:Name="Performance" Title="{Binding [PerformancePage], Source={StaticResource Loc}}" Text="{Binding [PerformanceText], Source={StaticResource Loc}}" StartGlyph="&#xE9D9;" EndGlyph="&#xE76C;" Click="Performance_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+        
+        <helper:CustomCardButton x:Name="Privacy" Title="{Binding [PrivacyPage], Source={StaticResource Loc}}" Text="{Binding [PrivacyText], Source={StaticResource Loc}}" StartGlyph="&#xEA18;" EndGlyph="&#xE76C;" Click="Privacy_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+        
+        <helper:CustomCardButton x:Name="About" Title="{Binding [AboutPage], Source={StaticResource Loc}}" Text="{Binding [AboutText], Source={StaticResource Loc}}" StartGlyph="&#xE77B;" EndGlyph="&#xE76C;" Click="About_Click" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+    </StackPanel>
+</Page>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="PersonalWinUIApp.Views.Shell.ShellPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersonalWinUIApp.Views.Shell"
+    xmlns:helper="using:MyWinUIUtilities.Navigation"
+    xmlns:view="using:MyWinUIUtilities.UserControls"
+    xmlns:tools="using:MyWinUIUtilities.Tools"
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Unloaded="Page_Unloaded">
+
+    <Grid>
+        <NavigationView x:Name="navigationView" ItemInvoked="NavigationView_ItemInvoked" BackRequested="NavigationView_BackRequested" IsSettingsVisible="False">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="0" Icon="Home" Content="{Binding [HomePage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="HomePage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+                <NavigationViewItem Tag="0" Icon="Video" Content="{Binding [VideosPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="VideosPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True">
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem Tag="1" Icon="Video" Content="{Binding [MoviesPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="MoviesPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+                        <NavigationViewItem Tag="1" Icon="Video" Content="{Binding [SeriesPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="SeriesPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+                        <NavigationViewItem Tag="1" Icon="Video" Content="{Binding [AnimationPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="AnimationPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="0" Icon="Audio" Content="{Binding [MusicsPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="MusicsPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+                <NavigationViewItem Tag="0" Icon="Pictures" Content="{Binding [PicturesPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="PicturesPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+                <NavigationViewItem Tag="0" Icon="Folder" Content="{Binding [FilesPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="FilesPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+            </NavigationView.MenuItems>
+
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Tag="0" Content="{Binding [SettingPage], Source={StaticResource Loc}}" helper:NavigationServices.NavigationTo="SettingsPage" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True">
+                    <NavigationViewItem.Icon>
+                        <AnimatedIcon>
+                            <AnimatedIcon.Source>
+                                <animatedvisuals:AnimatedSettingsVisualSource/>
+                            </AnimatedIcon.Source>
+                        </AnimatedIcon>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.FooterMenuItems>
+
+            <NavigationView.Content>
+                <ScrollView>
+                    <Grid Padding="25,0,25,50">
+                        <Grid RowSpacing="20" MaxWidth="1150">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <view:CustomBreadcrumb x:Name="AppBreadcrumbBar" Items="{x:Bind BreadcrumbItems}" Grid.Row="0" Margin="0,16,0,0" ItemFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" tools:FontScaleHelper.Enable="True"/>
+                            <Frame x:Name="navigationFrame" Grid.Row="1"/>
+                        </Grid>
+                    </Grid>
+                </ScrollView>
+            </NavigationView.Content>
+
+        </NavigationView>
+    </Grid>
+</Page>

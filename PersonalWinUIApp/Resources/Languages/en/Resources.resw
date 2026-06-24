@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutText" xml:space="preserve">
+    <value>Version, license, and update information</value>
+  </data>
+  <data name="AboutPage" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutUsPage" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="AccentCustomSettingButtonText" xml:space="preserve">
+    <value>Select which color to set for accent</value>
+  </data>
+  <data name="AccentCustomSettingButtonTitle" xml:space="preserve">
+    <value>Accent Color</value>
+  </data>
+  <data name="AccentExpanderButton" xml:space="preserve">
+    <value>System Colors</value>
+  </data>
+  <data name="ActivatePage" xml:space="preserve">
+    <value>Activating</value>
+  </data>
+  <data name="AnimationPage" xml:space="preserve">
+    <value>Animations</value>
+  </data>
+  <data name="AppearanceText" xml:space="preserve">
+    <value>Theme, accent color, and visual effects</value>
+  </data>
+  <data name="AppearancePage" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="ApplicationSubtitle" xml:space="preserve">
+    <value>1.0.0.1</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>Multi Media</value>
+  </data>
+  <data name="ComboBoxItemAcrylic" xml:space="preserve">
+    <value>Acrylic</value>
+  </data>
+  <data name="ComboBoxItemDarkTheme" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ComboBoxItemEnglishLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ComboBoxItemFarsiLanguage" xml:space="preserve">
+    <value>Persian</value>
+  </data>
+  <data name="ComboBoxItemLightTheme" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ComboBoxItemManualTheme" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="ComboBoxItemMica" xml:space="preserve">
+    <value>Mica base</value>
+  </data>
+  <data name="ComboBoxItemMicaAlt" xml:space="preserve">
+    <value>Mica base alt</value>
+  </data>
+  <data name="ComboBoxItemSystemTheme" xml:space="preserve">
+    <value>Use system setting</value>
+  </data>
+  <data name="FilesPage" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="LanguageCustomSettingButtonText" xml:space="preserve">
+    <value>Select which app language to display</value>
+  </data>
+  <data name="LanguageCustomSettingButtonTitle" xml:space="preserve">
+    <value>App Language</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>App language and number format</value>
+  </data>
+  <data name="LanguagePage" xml:space="preserve">
+    <value>Language &amp; Region</value>
+  </data>
+  <data name="MoviesPage" xml:space="preserve">
+    <value>Movies</value>
+  </data>
+  <data name="MusicsPage" xml:space="preserve">
+    <value>Musics</value>
+  </data>
+  <data name="NetworkText" xml:space="preserve">
+    <value>Network status and connection settings</value>
+  </data>
+  <data name="NetworkPage" xml:space="preserve">
+    <value>Network &amp; Internet</value>
+  </data>
+  <data name="NotificationsText" xml:space="preserve">
+    <value>Notification preferences and sounds</value>
+  </data>
+  <data name="NotificationsPage" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="PerformanceText" xml:space="preserve">
+    <value>Hardware acceleration, animations, and cache</value>
+  </data>
+  <data name="PerformancePage" xml:space="preserve">
+    <value>Performance</value>
+  </data>
+  <data name="PicturesPage" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
+  <data name="PrivacyText" xml:space="preserve">
+    <value>Manage stored data and privacy options</value>
+  </data>
+  <data name="PrivacyPage" xml:space="preserve">
+    <value>Privacy &amp; Data</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SeriesPage" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="SettingPage" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="StartupText" xml:space="preserve">
+    <value>Launch behavior and window settings</value>
+  </data>
+  <data name="StartupPage" xml:space="preserve">
+    <value>Startup &amp; Window</value>
+  </data>
+  <data name="TextThemeExpander" xml:space="preserve">
+    <value>Open your settings and navigate to Themes</value>
+  </data>
+  <data name="TextTransparencyExpander" xml:space="preserve">
+    <value>Select which transparency to display</value>
+  </data>
+  <data name="ThemeCustomSettingButtonText" xml:space="preserve">
+    <value>Select which app theme to display</value>
+  </data>
+  <data name="ThemeCustomSettingButtonTitle" xml:space="preserve">
+    <value>App Theme</value>
+  </data>
+  <data name="ThemeExpanderButton" xml:space="preserve">
+    <value>System Themes</value>
+  </data>
+  <data name="TitleThemeExpander" xml:space="preserve">
+    <value>System Themes</value>
+  </data>
+  <data name="TitleTransparencyExpander" xml:space="preserve">
+    <value>Transparency kind</value>
+  </data>
+  <data name="TransparencyCustomSettingText" xml:space="preserve">
+    <value>Make window background slightly transparent</value>
+  </data>
+  <data name="TransparencyCustomSettingTitle" xml:space="preserve">
+    <value>Transparency effect</value>
+  </data>
+  <data name="VideosPage" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>Time Zone</value>
+  </data>
+  <data name="ToggleSwitchOn" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="ToggleSwitchOff" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="ToggleSwitchRightToLeft" xml:space="preserve">
+    <value>Right to Left</value>
+  </data>
+  <data name="ToggleSwitchLeftToRight" xml:space="preserve">
+    <value>Left to Right</value>
+  </data>
+  <data name="FlowDirectionTitle" xml:space="preserve">
+    <value>Flow direction</value>
+  </data>
+  <data name="FlowDirectionText" xml:space="preserve">
+    <value>Select which direction to display</value>
+  </data>
+  <data name="InfoBarWarning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="InfoBarSuccess" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="InfoBarError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="InfoBarInfo" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="DirectionInfoBar" xml:space="preserve">
+    <value>Changing the app orientation from right to left may cause clutter or undesirable display of some parts of the user interface</value>
+  </data>
+  <data name="RegionCustomCardGridText" xml:space="preserve">
+    <value>Select the country you currently live in</value>
+  </data>
+  <data name="RegionCustomCardGridTitle" xml:space="preserve">
+    <value>Region &amp; Country</value>
+  </data>
+  <data name="FontFamilyCustomCardExpanderText" xml:space="preserve">
+    <value>Select which Font you want to display</value>
+  </data>
+  <data name="FontFamilyCustomCardExpanderTitle" xml:space="preserve">
+    <value>Fonts</value>
+  </data>
+  <data name="FontScaleCustomCardGridText" xml:space="preserve">
+    <value>Select your favorite Scale for font size</value>
+  </data>
+  <data name="FontScaleCustomCardGridTitle" xml:space="preserve">
+    <value>Font Scale</value>
+  </data>
+  <data name="StartupCustomCardGridText" xml:space="preserve">
+    <value>Automatically launch the app when Windows starts</value>
+  </data>
+  <data name="StartupCustomCardGridTitle" xml:space="preserve">
+    <value>Run at Startup</value>
+  </data>
+  <data name="MinToTrayCustomCardGridText" xml:space="preserve">
+    <value>Hide the app in the system tray when minimized instead of showing it on the taskbar</value>
+  </data>
+  <data name="MinToTrayCustomCardGridTitle" xml:space="preserve">
+    <value>Minimize to Tray</value>
+  </data>
+  <data name="CloseToTrayCustomCardGridText" xml:space="preserve">
+    <value>Keep the app running in the system tray when the window is closed</value>
+  </data>
+  <data name="CloseToTrayCustomCardGridTitle" xml:space="preserve">
+    <value>Close to Tray</value>
+  </data>
+  <data name="RememberWindoPositionText" xml:space="preserve">
+    <value>Restore the last window position on startup</value>
+  </data>
+  <data name="RememberWindoPositionTitle" xml:space="preserve">
+    <value>Remember Window Position</value>
+  </data>
+  <data name="RememberWindoSizeText" xml:space="preserve">
+    <value>Restore the last window size on startup</value>
+  </data>
+  <data name="RememberWindoSizeTitle" xml:space="preserve">
+    <value>Remember Window Size</value>
+  </data>
+  <data name="RememberMaximizeStateText" xml:space="preserve">
+    <value>Reopen the app maximized if it was maximized when closed</value>
+  </data>
+  <data name="RememberMaximizeStateTitle" xml:space="preserve">
+    <value>Remember Maximized State</value>
+  </data>
+  <data name="AlwaysOnTopText" xml:space="preserve">
+    <value>Keep the app window above other windows</value>
+  </data>
+  <data name="AlwaysOnTopTitle" xml:space="preserve">
+    <value>Always on Top</value>
+  </data>
+  <data name="RestoreToLastMonitorText" xml:space="preserve">
+    <value>Reopen the app on the monitor where it was last used</value>
+  </data>
+  <data name="RestoreToLastMonitorTitle" xml:space="preserve">
+    <value>Restore to Last Monitor</value>
+  </data>
+  <data name="StartupPageCustomeCardExpanderText" xml:space="preserve">
+    <value>Open application with your selected page</value>
+  </data>
+  <data name="StartupPageCustomeCardExpanderTitle" xml:space="preserve">
+    <value>Startup Page</value>
+  </data>
+  <data name="StartupPageStateCustomeCardExpanderText" xml:space="preserve">
+    <value>Choose which page opens when the app starts</value>
+  </data>
+  <data name="StartupPageStateCustomeCardExpanderTitle" xml:space="preserve">
+    <value>Manual Choose</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="LastNavigationPageStart" xml:space="preserve">
+    <value>last page</value>
+  </data>
+  <data name="StartupSelectPage" xml:space="preserve">
+    <value>Choose page</value>
+  </data>
+  <data name="AccountPage" xml:space="preserve">
+    <value>Account</value>
+  </data>
+</root>

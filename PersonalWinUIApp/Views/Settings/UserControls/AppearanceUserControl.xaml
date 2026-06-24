@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="PersonalWinUIApp.Views.Settings.UserControls.AppearanceUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersonalWinUIApp.Views.Settings.UserControls"
+    xmlns:helper="using:MyWinUIUtilities.UserControls"
+    xmlns:font="using:MyWinUIUtilities.Tools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="UserControl_Loaded">
+
+    <StackPanel Spacing="6">
+
+        <helper:CustomCardExpanderClickable Text="{Binding [ThemeCustomSettingButtonText], Source={StaticResource Loc}}" Title="{Binding [ThemeCustomSettingButtonTitle], Source={StaticResource Loc}}" x:Name="ThemeCustomButton" Glyph="&#xE793;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardExpanderClickable.OptionContent>
+                <ComboBox x:Name="ThemeCombo" MinWidth="120" SelectionChanged="ThemeCombo_SelectionChanged" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True">
+                    <ComboBoxItem Tag="Light" Content="{Binding [ComboBoxItemLightTheme], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                    <ComboBoxItem Tag="Dark" Content="{Binding [ComboBoxItemDarkTheme], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                    <ComboBoxItem Tag="System" Content="{Binding [ComboBoxItemSystemTheme], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                </ComboBox>
+            </helper:CustomCardExpanderClickable.OptionContent>
+            <helper:CustomCardExpanderClickable.GridOptionContent>
+                <helper:CustomCardGrid Text="{Binding [TextThemeExpander], Source={StaticResource Loc}}" Title="{Binding [TitleThemeExpander], Source={StaticResource Loc}}" IsTransParent="True" IsIconExist="False" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+                    <helper:CustomCardGrid.OptionContent>
+                        <Button x:Name="ThemeExpanderButton" Content="{Binding [ThemeExpanderButton], Source={StaticResource Loc}}" Style="{ThemeResource AccentButtonStyle}" Click="ThemeExpanderButton_Click" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True"/>
+                    </helper:CustomCardGrid.OptionContent>
+                </helper:CustomCardGrid>
+            </helper:CustomCardExpanderClickable.GridOptionContent>
+        </helper:CustomCardExpanderClickable>
+
+        <helper:CustomCardExpanderUnClickable x:Name="CSEAccent" Glyph="&#xE790;" Text="{Binding [AccentCustomSettingButtonText], Source={StaticResource Loc}}" Title="{Binding [AccentCustomSettingButtonTitle], Source={StaticResource Loc}}" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardExpanderUnClickable.OptionContent>
+                <ComboBox x:Name="AccentCombo" MinWidth="120" SelectionChanged="AccentCombo_SelectionChanged" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True">
+                    <ComboBoxItem Tag="Manual" Content="{Binding [ComboBoxItemManualTheme], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                    <ComboBoxItem Tag="System" Content="{Binding [ComboBoxItemSystemTheme], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                </ComboBox>
+            </helper:CustomCardExpanderUnClickable.OptionContent>
+            <helper:CustomCardExpanderUnClickable.GridOptionContent>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <GridView x:Name="AccentColorsGrid" IsItemClickEnabled="True" SelectionMode="Single" ItemsSource="{x:Bind AccentColors}" Padding="17" ItemClick="AccentColorsGrid_ItemClick" SelectedIndex="19">
+                        <GridView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <ItemsWrapGrid Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </GridView.ItemsPanel>
+                        <GridView.ItemTemplate>
+                            <DataTemplate x:DataType="SolidColorBrush">
+                                <Border Width="48" Height="48" CornerRadius="4" Margin="6" Background="{Binding}"/>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                    <Button x:Name="AccentButton" Grid.Row="1" Content="{Binding [AccentExpanderButton], Source={StaticResource Loc}}" Style="{ThemeResource AccentButtonStyle}" HorizontalAlignment="Right" Margin="0,0,20,20" Click="AccentButton_Click" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True"/>
+                </Grid>
+            </helper:CustomCardExpanderUnClickable.GridOptionContent>
+        </helper:CustomCardExpanderUnClickable>
+
+        <helper:CustomCardExpanderUnClickable Glyph="&#xE7C4;" Title="{Binding [TransparencyCustomSettingTitle], Source={StaticResource Loc}}" Text="{Binding [TransparencyCustomSettingText], Source={StaticResource Loc}}" IsOpen="{Binding ElementName=SwitchEffect, Path=IsOn, Mode=TwoWay}" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardExpanderUnClickable.OptionContent>
+                <ToggleSwitch x:Name="SwitchEffect" Toggled="SwitchEffect_Toggled" OnContent="{Binding [ToggleSwitchOn], Source={StaticResource Loc}}" OffContent="{Binding [ToggleSwitchOff], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True"/>
+            </helper:CustomCardExpanderUnClickable.OptionContent>
+            <helper:CustomCardExpanderUnClickable.GridOptionContent>
+                <helper:CustomCardGrid Text="{Binding [TextTransparencyExpander], Source={StaticResource Loc}}" Title="{Binding [TitleTransparencyExpander], Source={StaticResource Loc}}" IsTransParent="True" IsIconExist="False" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+                    <helper:CustomCardGrid.OptionContent>
+                        <ComboBox x:Name="TransparencyCombo" MinWidth="120" SelectionChanged="TransparencyCombo_SelectionChanged" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True">
+                            <ComboBoxItem Tag="Acrylic" Content="{Binding [ComboBoxItemAcrylic], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                            <ComboBoxItem Tag="MicaBaseAlt" Content="{Binding [ComboBoxItemMicaAlt], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                            <ComboBoxItem Tag="MicaBase" Content="{Binding [ComboBoxItemMica], Source={StaticResource Loc}}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}"/>
+                        </ComboBox>
+                    </helper:CustomCardGrid.OptionContent>
+                </helper:CustomCardGrid>
+            </helper:CustomCardExpanderUnClickable.GridOptionContent>
+        </helper:CustomCardExpanderUnClickable>
+
+    </StackPanel>
+</UserControl>

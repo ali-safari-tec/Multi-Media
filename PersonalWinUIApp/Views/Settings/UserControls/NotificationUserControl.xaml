@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="PersonalWinUIApp.Views.Settings.UserControls.NotificationUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersonalWinUIApp.Views.Settings.UserControls"
+    xmlns:helper="using:MyWinUIUtilities.UserControls"
+    xmlns:font="using:MyWinUIUtilities.Tools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="UserControl_Loaded">
+
+    <StackPanel Spacing="6">
+        <helper:CustomCardExpanderUnClickable x:Name="NotificationExpander" Glyph="&#xE91C;" IsOpen="True" IsGridTransparent="True" Title="Eanable Notification">
+
+            <helper:CustomCardExpanderUnClickable.OptionContent>
+                <ToggleSwitch x:Name="NotificationEnabledSwitch" font:FontScaleHelper.Enable="True" OnContent="{Binding [ToggleSwitchOn], Source={StaticResource Loc}}" OffContent="{Binding [ToggleSwitchOff], Source={StaticResource Loc}}" Toggled="NotificationEnabledSwitch_Toggled"/>
+            </helper:CustomCardExpanderUnClickable.OptionContent>
+            <helper:CustomCardExpanderUnClickable.GridOptionContent>
+                <StackPanel Spacing="2">
+
+                    <helper:CustomCardGrid Title="Do not disturb mode"  CornerSharp="0" IsBorderTransparent="True" IsEnable="{x:Bind NotificationEnabledSwitch.IsOn, Mode=OneWay}" IsIconExist="False">
+                        <helper:CustomCardGrid.OptionContent>
+                            <ToggleSwitch x:Name="DisturbSwitch" IsEnabled="{x:Bind NotificationEnabledSwitch.IsOn, Mode=OneWay}" font:FontScaleHelper.Enable="True" OnContent="{Binding [ToggleSwitchOn], Source={StaticResource Loc}}" OffContent="{Binding [ToggleSwitchOff], Source={StaticResource Loc}}" Toggled="DisturbSwitch_Toggled"/>
+                        </helper:CustomCardGrid.OptionContent>
+                    </helper:CustomCardGrid>
+                    <helper:CustomCardGrid Title="Suppress notifications while fullscreen"  CornerSharp="0" IsBorderTransparent="True" IsEnable="{x:Bind NotificationEnabledSwitch.IsOn, Mode=OneWay}" IsIconExist="False">
+                        <helper:CustomCardGrid.OptionContent>
+                            <ToggleSwitch x:Name="SuppressSwitch" IsEnabled="{x:Bind NotificationEnabledSwitch.IsOn, Mode=OneWay}" font:FontScaleHelper.Enable="True" OnContent="{Binding [ToggleSwitchOn], Source={StaticResource Loc}}" OffContent="{Binding [ToggleSwitchOff], Source={StaticResource Loc}}" Toggled="SuppressSwitch_Toggled"/>
+                        </helper:CustomCardGrid.OptionContent>
+                    </helper:CustomCardGrid>
+                    <helper:CustomCardGrid Glyph="&#xE767;" Title="Play notification sound"  CornerSharp="0,0,4,4" IsBorderTransparent="True" IsEnable="{x:Bind NotificationEnabledSwitch.IsOn, Mode=OneWay}">
+                        <helper:CustomCardGrid.OptionContent>
+                            <ToggleSwitch x:Name="SoundSwitch" IsEnabled="{x:Bind NotificationEnabledSwitch.IsOn, Mode=OneWay}" font:FontScaleHelper.Enable="True" OnContent="{Binding [ToggleSwitchOn], Source={StaticResource Loc}}" OffContent="{Binding [ToggleSwitchOff], Source={StaticResource Loc}}" Toggled="SoundSwitch_Toggled"/>
+                        </helper:CustomCardGrid.OptionContent>
+                    </helper:CustomCardGrid>
+
+                </StackPanel>
+            </helper:CustomCardExpanderUnClickable.GridOptionContent>
+        </helper:CustomCardExpanderUnClickable>
+        
+    </StackPanel>
+</UserControl>

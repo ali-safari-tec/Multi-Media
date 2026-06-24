@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="PersonalWinUIApp.Views.Settings.UserControls.StartupUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersonalWinUIApp.Views.Settings.UserControls"
+    xmlns:helper="using:MyWinUIUtilities.UserControls"
+    xmlns:font="using:MyWinUIUtilities.Tools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="UserControl_Loaded">
+
+    <StackPanel Spacing="6">
+        <TextBlock Text="App launch behavior" Style="{ThemeResource BodyStrongTextBlockStyle}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Margin="0,0,0,5"/>
+
+
+        <helper:CustomCardGrid Text="{Binding [StartupCustomCardGridText], Source={StaticResource Loc}}" Title="{Binding [StartupCustomCardGridTitle], Source={StaticResource Loc}}" Glyph="&#xE895;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardGrid.OptionContent>
+                <ToggleSwitch x:Name="RunAtStartup" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Toggled="RunAtStartup_Toggled"/>
+            </helper:CustomCardGrid.OptionContent>
+        </helper:CustomCardGrid>
+
+
+        <helper:CustomCardGrid Text="{Binding [MinToTrayCustomCardGridText], Source={StaticResource Loc}}" Title="{Binding [MinToTrayCustomCardGridTitle], Source={StaticResource Loc}}" Glyph="&#xE738;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardGrid.OptionContent>
+                <ToggleSwitch x:Name="MinToTray" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Toggled="MinToTray_Toggled"/>
+            </helper:CustomCardGrid.OptionContent>
+        </helper:CustomCardGrid>
+
+
+        <helper:CustomCardGrid Text="{Binding [CloseToTrayCustomCardGridText], Source={StaticResource Loc}}" Title="{Binding [CloseToTrayCustomCardGridTitle], Source={StaticResource Loc}}" Glyph="&#xE711;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardGrid.OptionContent>
+                <ToggleSwitch x:Name="CloseToTray" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Toggled="CloseToTray_Toggled"/>
+            </helper:CustomCardGrid.OptionContent>
+        </helper:CustomCardGrid>
+
+
+        <helper:CustomCardExpanderUnClickable x:Name="PageKindExpander" Text="{Binding [StartupPageCustomeCardExpanderText], Source={StaticResource Loc}}" Title="{Binding [StartupPageCustomeCardExpanderTitle], Source={StaticResource Loc}}" Glyph="&#xE80F;">
+            <helper:CustomCardExpanderUnClickable.OptionContent>
+                <ComboBox x:Name="StartPageKind" MinWidth="120" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" SelectionChanged="StartPageKind_SelectionChanged">
+                    <ComboBoxItem Tag="default" Content="{Binding [Default], Source={StaticResource Loc}}"/>
+                    <ComboBoxItem Tag="last" Content="{Binding [LastNavigationPageStart], Source={StaticResource Loc}}"/>
+                    <ComboBoxItem Tag="custom" Content="{Binding [StartupSelectPage], Source={StaticResource Loc}}"/>
+                </ComboBox>
+            </helper:CustomCardExpanderUnClickable.OptionContent>
+            <helper:CustomCardExpanderUnClickable.GridOptionContent>
+                <helper:CustomCardGrid IsTransParent="True" Text="{Binding [StartupPageStateCustomeCardExpanderText], Source={StaticResource Loc}}" Title="{Binding [StartupPageStateCustomeCardExpanderTitle], Source={StaticResource Loc}}" Glyph="&#xE777;">
+                    <helper:CustomCardGrid.OptionContent>
+                        <ComboBox x:Name="StartCustomPage" MinWidth="120" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" SelectionChanged="StartCustomPage_SelectionChanged">
+                            <ComboBoxItem Tag="HomePage" Content="{Binding [HomePage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="VideosPage" Content="{Binding [VideosPage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="MoviesPage" Content="{Binding [MoviesPage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="SeriesPage" Content="{Binding [SeriesPage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="AnimationPage" Content="{Binding [AnimationPage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="MusicsPage" Content="{Binding [MusicsPage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="PicturesPage" Content="{Binding [PicturesPage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="FilesPage" Content="{Binding [FilesPage], Source={StaticResource Loc}}"/>
+                            <ComboBoxItem Tag="SettingsPage" Content="{Binding [SettingPage], Source={StaticResource Loc}}"/>
+                        </ComboBox>
+                    </helper:CustomCardGrid.OptionContent>
+                </helper:CustomCardGrid>
+            </helper:CustomCardExpanderUnClickable.GridOptionContent>
+        </helper:CustomCardExpanderUnClickable>
+        
+        
+
+        <TextBlock Text="Window settings" Style="{ThemeResource BodyStrongTextBlockStyle}" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Margin="0,20,0,5"/>
+
+
+        <helper:CustomCardGrid Text="{Binding [RememberWindoSizeText], Source={StaticResource Loc}}" Title="{Binding [RememberWindoSizeTitle], Source={StaticResource Loc}}" Glyph="&#xE7FD;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardGrid.OptionContent>
+                <ToggleSwitch x:Name="reSizeSwitch" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Toggled="ReSizeSwitch_Toggled"/>
+            </helper:CustomCardGrid.OptionContent>
+        </helper:CustomCardGrid>
+
+
+        <helper:CustomCardGrid Text="{Binding [RememberWindoPositionText], Source={StaticResource Loc}}" Title="{Binding [RememberWindoPositionTitle], Source={StaticResource Loc}}" Glyph="&#xE70F;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardGrid.OptionContent>
+                <ToggleSwitch x:Name="rePositionSwitch" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Toggled="RePositionSwitch_Toggled"/>
+            </helper:CustomCardGrid.OptionContent>
+        </helper:CustomCardGrid>
+
+
+        <helper:CustomCardGrid Text="{Binding [RememberMaximizeStateText], Source={StaticResource Loc}}" Title="{Binding [RememberMaximizeStateTitle], Source={StaticResource Loc}}" Glyph="&#xE739;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardGrid.OptionContent>
+                <ToggleSwitch x:Name="reMaximizeStat" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Toggled="ReMaximizeStat_Toggled"/>
+            </helper:CustomCardGrid.OptionContent>
+        </helper:CustomCardGrid>
+
+
+        <helper:CustomCardGrid Text="{Binding [AlwaysOnTopText], Source={StaticResource Loc}}" Title="{Binding [AlwaysOnTopTitle], Source={StaticResource Loc}}" Glyph="&#xE840;" CardFontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}">
+            <helper:CustomCardGrid.OptionContent>
+                <ToggleSwitch x:Name="AlwaysOnTop" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" font:FontScaleHelper.Enable="True" Toggled="AlwaysOnTop_Toggled"/>
+            </helper:CustomCardGrid.OptionContent>
+        </helper:CustomCardGrid>
+
+    </StackPanel>
+</UserControl>
