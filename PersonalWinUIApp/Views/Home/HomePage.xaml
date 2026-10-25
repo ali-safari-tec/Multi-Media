@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock x:Name="ali" Text="Home" Margin="20" FontSize="32"/>
-    </Grid>
+    <StackPanel Spacing="16">
+
+    </StackPanel>
 </Page>
