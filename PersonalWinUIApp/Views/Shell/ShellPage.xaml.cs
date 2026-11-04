@@ -14,6 +14,7 @@ using PersonalWinUIApp.Views.Account;
 using PersonalWinUIApp.Views.Home;
 using PersonalWinUIApp.Views.Settings;
 using PersonalWinUIApp.Views.Settings.Pages;
+using PersonalWinUIApp.Views.Videos.Pages;
 using Windows.UI;
 
 namespace PersonalWinUIApp.Views.Shell;
@@ -88,7 +89,15 @@ public sealed partial class ShellPage : Page
             _ => typeof(SettingsPage)
         };
 
-        Services.ExternalNavigate(target, level: 1, transition:NavigationTransition.SlideFromRight);
+        Services.ExternalNavigate(target ,level: 1 ,transition:NavigationTransition.SlideFromRight);
+    }
+
+    public void VidoeInfoNavigation(string videoTitle)
+    {
+        Services.ExternalNavigate(typeof(VideoInfoPage) , parameters: new Dictionary<string, object>
+        {
+            ["BreadcumbTitle"] = videoTitle
+        }, level: 1 ,transition:NavigationTransition.SlideFromRight);
     }
 
     public void ReloadFrame(object? parameter = null)

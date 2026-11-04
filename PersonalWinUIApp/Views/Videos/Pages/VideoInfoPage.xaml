@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="PersonalWinUIApp.Views.Videos.Pages.VideoInfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PersonalWinUIApp.Views.Videos.Pages"
+    xmlns:font="using:MyWinUIUtilities.Tools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid ColumnSpacing="10" RowSpacing="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <MediaPlayerElement Grid.Row="0" Grid.Column="0" Source="ms-appx:///Assets/2cb8971e1629b3f51c6424b69992939770080231-720p.mp4" AutoPlay="False" AreTransportControlsEnabled="True"/>
+
+        <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="2" CornerRadius="8">
+            
+        </Border>
+
+        <TextBlock Text="سلام این ویدیو خیلی جالب حتما استفاده کنیم سلام این ویدیو خیلی جالب حتما استفاده کنیم سلام این ویدیو خیلی جالب حتما استفاده کنیم سلام این ویدیو خیلی جالب حتما استفاده کنیم سلام این ویدیو خیلی جالب حتما استفاده کنیم" Grid.Row="1" Grid.Column="0" FlowDirection="RightToLeft"  font:FontScaleHelper.Enable="True" FontFamily="{Binding CurrentFont, Source={StaticResource FontServices}}" Margin="10" TextWrapping="WrapWholeWords"/>
+
+    </Grid>
+</Page>

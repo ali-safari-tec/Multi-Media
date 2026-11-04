@@ -9,6 +9,10 @@
     mc:Ignorable="d">
 
     <StackPanel Spacing="16">
-
+        <Button Width="100" Height="50" Click="Button_Click"/>
+        <Button Width="100" Height="50" Click="Button1_Click"/>
+        <TextBox x:Name="ali" Height="500" AllowDrop="True" AutomationProperties.Name="multi-line TextBox" TextWrapping="Wrap" AcceptsReturn="True" IsSpellCheckEnabled="True"
+    SelectionHighlightColor="Green"/>
+        <MediaPlayerElement x:Name="ali2"/>
     </StackPanel>
 </Page>

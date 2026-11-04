@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using PersonalWinUIApp.Tools;
+using PersonalWinUIApp.Views.Shell;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +28,7 @@ namespace PersonalWinUIApp.Views.Videos.Pages;
 public sealed partial class MoviesPage : Page
 {
     private readonly ModelCardServices _videoCardServices = new();
+    private static ShellPage Shell => App.MainWindow!.ShellPage;
 
     public MoviesPage()
     {
@@ -53,13 +55,12 @@ public sealed partial class MoviesPage : Page
     {
         if (sender is Button btn && btn.CommandParameter is VideoCardViewModel vm)
         {
-            if (vm.VideoPath is null)
-                return;
-
-            // اگر vm.VideoPath = new Uri(file.Path) باشد، این یک مسیر فایل است.
-            // بهتر: فایل را از Path بگیر و با Launcher اجرا کن.
-            var file = await StorageFile.GetFileFromPathAsync(vm.VideoPath.LocalPath);
-            await Launcher.LaunchFileAsync(file);
+            //if (vm.VideoPath is null) return;
+            //var file = await StorageFile.GetFileFromPathAsync(vm.VideoPath.LocalPath);
+            //await Launcher.LaunchFileAsync(file);
+            if (vm.Title is null) return;
+            string videoName = vm.Title;
+            Shell.VidoeInfoNavigation(videoName);
         }
     }
 

@@ -14,6 +14,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Assets\2cb8971e1629b3f51c6424b69992939770080231-720p.mp4" />
     <None Remove="Assets\avc.png" />
     <None Remove="Assets\avi.png" />
     <None Remove="Assets\Fonts\Estedad-FD-Black.ttf" />
@@ -91,6 +92,7 @@
     <None Remove="Views\Videos\Pages\AnimationPage.xaml" />
     <None Remove="Views\Videos\Pages\MoviesPage.xaml" />
     <None Remove="Views\Videos\Pages\SeriesPage.xaml" />
+    <None Remove="Views\Videos\Pages\VideoInfoPage.xaml" />
     <None Remove="Views\Videos\VideosPage.xaml" />
   </ItemGroup>
 
@@ -438,5 +440,10 @@
     <Reference Include="MyWinUIUtilities">
       <HintPath>..\..\MyWinUIUtilities\MyWinUIUtilities\bin\Debug\net9.0-windows10.0.22621.0\MyWinUIUtilities.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Videos\Pages\VideoInfoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

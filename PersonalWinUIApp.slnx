@@ -4,6 +4,7 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="MediaServer.Api/MediaServer.Api.csproj" Id="28e90c10-38d2-41c0-a6ce-42989acb198f" />
   <Project Path="PersonalWinUIApp/PersonalWinUIApp.csproj">
     <Platform Solution="*|ARM64" Project="ARM64" />
     <Platform Solution="*|x64" Project="x64" />
